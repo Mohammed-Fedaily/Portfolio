@@ -1,0 +1,345 @@
+:root {
+  --primary-color: #6e06f2;
+  --secondary-color: #4a148c;
+  --teratery-color: #bbb1c9;
+  --text-color: #333;
+  --background-color: #ffff;
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav a {
+  font-family: "Space Mono", monospace;
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.hero-content {
+  flex: 1;
+  padding-left: 15%;
+}
+
+.hero-content h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 4rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+
+.hero-content button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(110, 6, 242, 0.2);
+}
+
+.hero-content button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+  padding-right: 15%;
+}
+
+.hero-image img {
+  max-width: 350px;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+.my-story,
+.projects,
+.experience-history,
+.skills,
+.get-in-touch {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.section-title {
+  text-align: left;
+  margin-bottom: 50px;
+  font-family: "Space Mono", monospace;
+}
+.section-title-contact {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Space Mono", monospace;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  bottom: -10px;
+  left: 15%;
+  background-color: var(--primary-color);
+}
+
+/* Project */
+.project-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+  width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h3 {
+  font-family: "Space Mono", monospace;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Experience */
+.experience-table {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.experience-table th,
+.experience-table td {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.experience-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Space Mono", monospace;
+}
+
+/* Skills */
+.skill-item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-name {
+  flex: 0 0 150px;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+}
+
+.skill-progress {
+  flex-grow: 1;
+  height: 15px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+/* Contact Section */
+.contact {
+  padding: 100px 0;
+  background-color: white;
+}
+
+/*Fourm */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Hobby */
+.hobby {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.hobby-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #f0f0f0;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--teratery-color);
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+}
